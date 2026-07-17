@@ -1,0 +1,15 @@
+a {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.detail {
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 22px;
+}
+
+h1 {
+  margin-top: 0;
+}

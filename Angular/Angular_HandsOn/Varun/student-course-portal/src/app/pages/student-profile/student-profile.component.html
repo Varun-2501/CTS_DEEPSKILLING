@@ -1,0 +1,18 @@
+<section class="profile">
+  <h1>Student Profile</h1>
+  <p><strong>Name:</strong> Varun</p>
+  <p><strong>Email:</strong> varun@example.com</p>
+</section>
+
+<section class="profile">
+  <h2>Enrolled Courses</h2>
+  @if (enrolledCourses.length) {
+    <ul>
+      @for (course of enrolledCourses; track course.id) {
+        <li>{{ course.name }} - {{ course.code }}</li>
+      }
+    </ul>
+  } @else {
+    <p>No enrollments yet. Enroll from the Courses page.</p>
+  }
+</section>

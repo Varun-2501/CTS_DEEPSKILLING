@@ -1,0 +1,29 @@
+<section class="hero">
+  <div>
+    <h1>{{ portalName }}</h1>
+    <p>Browse courses, submit enrollment requests, track grades, and review notifications from one Angular SPA.</p>
+    <div class="actions">
+      <button type="button" [disabled]="!isPortalActive" (click)="onEnrollClick()">Enroll Now</button>
+      <button type="button" (click)="addLocalCourse()">Add Shared Course</button>
+      @if (message) {
+        <span>{{ message }}</span>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <label for="search">Search term</label>
+  <!-- [property] is one-way component-to-DOM binding; [(ngModel)] is two-way DOM-to-component plus component-to-DOM binding. -->
+  <input id="search" name="search" [(ngModel)]="searchTerm" placeholder="Angular, forms, testing" />
+  <p>Searching for: {{ searchTerm }}</p>
+</section>
+
+<section class="stats" aria-label="Portal stats">
+  <div><strong>{{ availableCourses }}</strong><span>Courses Available</span></div>
+  <div><strong>{{ enrolled }}</strong><span>Enrolled</span></div>
+  <div><strong>{{ gpa | number: '1.1-1' }}</strong><span>GPA</span></div>
+</section>
+
+<app-course-summary-widget></app-course-summary-widget>
+<app-notification></app-notification>

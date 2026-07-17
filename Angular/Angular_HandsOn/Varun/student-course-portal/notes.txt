@@ -1,0 +1,13 @@
+angular.json - Angular workspace configuration for build, serve, test, assets, styles, and production budgets.
+tsconfig.json - Base TypeScript compiler settings shared by the Angular application and tests.
+tsconfig.app.json - TypeScript settings used specifically when compiling the browser application.
+package.json - Npm scripts and dependency versions required to install, build, run, and test the portal.
+src/main.ts - Application entry point that bootstraps the standalone root component with appConfig.
+src/app/app.config.ts - Standalone Angular provider configuration for router, HTTP, interceptors, NgRx, effects, and devtools.
+src/app/app.ts - Root application component that hosts the header, loading spinner, and router outlet.
+src/index.html - Browser document shell where Angular mounts the app-root element.
+
+Production budget notes:
+initial maximumWarning is 500kB and maximumError is 1MB; these warn or fail the production build when the first JS/CSS payload is too large.
+anyComponentStyle maximumWarning is 4kB and maximumError is 8kB; these control per-component stylesheet size.
+The compiled application code is emitted under dist/student-course-portal/browser as hashed JavaScript bundle files.

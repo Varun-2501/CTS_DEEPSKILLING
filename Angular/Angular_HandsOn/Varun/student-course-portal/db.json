@@ -1,0 +1,15 @@
+{
+  "courses": [
+    { "id": 1, "name": "Angular Fundamentals", "code": "ANG101", "credits": 3, "gradeStatus": "passed", "enrolled": false, "description": "Components, templates, binding, and lifecycle basics." },
+    { "id": 2, "name": "Reactive Forms", "code": "ANG205", "credits": 4, "gradeStatus": "pending", "enrolled": false, "description": "Complex forms using FormBuilder, validators, and FormArray." },
+    { "id": 3, "name": "RxJS and HTTP", "code": "ANG310", "credits": 3, "gradeStatus": "pending", "enrolled": false, "description": "Observable streams, API integration, interceptors, and error handling." },
+    { "id": 4, "name": "State Management with NgRx", "code": "ANG420", "credits": 4, "gradeStatus": "failed", "enrolled": false, "description": "Actions, reducers, effects, selectors, and store debugging." },
+    { "id": 5, "name": "Testing Angular Apps", "code": null, "credits": 1, "gradeStatus": "passed", "enrolled": false, "description": "Jasmine, Karma, TestBed, mocks, and coverage." }
+  ],
+  "students": [
+    { "id": 1, "name": "Aarav Sharma", "email": "aarav@example.com", "courseId": 1 },
+    { "id": 2, "name": "Diya Patel", "email": "diya@example.com", "courseId": 2 },
+    { "id": 3, "name": "Varun", "email": "varun@example.com", "courseId": 3 }
+  ],
+  "enrollments": []
+}

@@ -1,0 +1,13 @@
+<a routerLink="/courses">Back to courses</a>
+
+@if (course) {
+  <section class="detail">
+    <h1>{{ course.name }}</h1>
+    <p><strong>Code:</strong> {{ course.code || 'NO-CODE' }}</p>
+    <p><strong>Credits:</strong> {{ course.credits }}</p>
+    <p><strong>Status:</strong> {{ course.gradeStatus }}</p>
+    <p>{{ course.description }}</p>
+  </section>
+} @else {
+  <p>{{ errorMessage || 'Loading course detail...' }}</p>
+}

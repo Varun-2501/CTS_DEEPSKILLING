@@ -1,0 +1,49 @@
+.form-panel {
+  max-width: 720px;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 22px;
+}
+
+form,
+label,
+.additional {
+  display: grid;
+  gap: 12px;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+input,
+select {
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.additional div {
+  display: flex;
+  gap: 8px;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+.success {
+  margin-top: 16px;
+  border-radius: 6px;
+  background: #dcfce7;
+  padding: 12px;
+  color: #166534;
+  font-weight: 800;
+}

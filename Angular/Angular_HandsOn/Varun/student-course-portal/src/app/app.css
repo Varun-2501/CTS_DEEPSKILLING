@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  color: #172033;
+  background: #f4f7fb;
+}
+
+.shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 48px;
+}
+
+.global-spinner {
+  position: fixed;
+  top: 76px;
+  right: 18px;
+  z-index: 20;
+  border: 1px solid #b7c7dd;
+  border-left: 4px solid #2563eb;
+  border-radius: 6px;
+  background: #ffffff;
+  padding: 10px 14px;
+  box-shadow: 0 8px 20px rgb(31 41 55 / 12%);
+  font-weight: 700;
+}

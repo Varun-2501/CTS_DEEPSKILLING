@@ -1,0 +1,9 @@
+<app-header></app-header>
+
+@if (loadingService.isLoading$ | async) {
+  <div class="global-spinner" aria-live="polite">Loading...</div>
+}
+
+<main class="shell">
+  <router-outlet></router-outlet>
+</main>

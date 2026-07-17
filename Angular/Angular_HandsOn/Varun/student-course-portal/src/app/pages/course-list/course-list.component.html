@@ -1,0 +1,47 @@
+<section class="page-heading">
+  <h1>Course Listing</h1>
+  <div class="search">
+    <input [(ngModel)]="searchTerm" placeholder="Search courses" (input)="updateSearch()" />
+  </div>
+</section>
+
+<section class="admin-actions" aria-label="Course API actions">
+  <h2>Course API Actions</h2>
+  <button type="button" (click)="createApiCourse()">POST Create Course</button>
+  <button type="button" (click)="updateApiCourse()">PUT Update Course 1</button>
+  <button type="button" (click)="deleteApiCourse()">DELETE Course 5</button>
+</section>
+
+@if (errorMessage$ | async; as errorMessage) {
+  <p class="error">{{ errorMessage }}</p>
+}
+
+@if (isLoading$ | async) {
+  <p class="loading">Loading courses...</p>
+} @else {
+  @if (courses$ | async; as courses) {
+    @if (courses.length > 0) {
+      <section class="course-grid">
+        @for (course of courses; track trackByCourseId($index, course)) {
+          <app-course-card
+            appHighlight="lightblue"
+            [course]="course"
+            [enrolledIds]="enrolledIds$ | async"
+            (enrollRequested)="onEnroll($event)"
+            (cardSelected)="openCourse($event)">
+          </app-course-card>
+        }
+      </section>
+    } @else {
+      <ng-template [ngTemplateOutlet]="noCourses"></ng-template>
+    }
+  }
+}
+
+<ng-template #noCourses>
+  <p>No courses available.</p>
+</ng-template>
+
+@if (selectedCourseId) {
+  <p class="selected">Selected course ID: {{ selectedCourseId }}</p>
+}
